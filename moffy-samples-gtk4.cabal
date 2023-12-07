@@ -6,7 +6,9 @@ cabal-version: 2.2
 
 name:           moffy-samples-gtk4
 version:        0.1.0.0
+synopsis:       Sample executables of moffy - GTK4 version
 description:    Please see the README on GitHub at <https://github.com/YoshikuniJujo/moffy-samples-gtk4#readme>
+category:       Control
 homepage:       https://github.com/YoshikuniJujo/moffy-samples-gtk4#readme
 bug-reports:    https://github.com/YoshikuniJujo/moffy-samples-gtk4/issues
 author:         Yoshikuni Jujo
@@ -23,21 +25,7 @@ source-repository head
   type: git
   location: https://github.com/YoshikuniJujo/moffy-samples-gtk4
 
-library
-  exposed-modules:
-      Lib
-  other-modules:
-      Paths_moffy_samples_gtk4
-  autogen-modules:
-      Paths_moffy_samples_gtk4
-  hs-source-dirs:
-      src
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
-  build-depends:
-      base >=4.7 && <5
-  default-language: Haskell2010
-
-executable moffy-samples-gtk4-exe
+executable moffy_samples_gtk4
   main-is: Main.hs
   other-modules:
       Paths_moffy_samples_gtk4
@@ -48,7 +36,9 @@ executable moffy-samples-gtk4-exe
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , moffy-samples-gtk4
+    , moffy
+    , moffy-samples
+    , moffy-samples-gtk4-run
   default-language: Haskell2010
 
 test-suite moffy-samples-gtk4-test
@@ -63,5 +53,4 @@ test-suite moffy-samples-gtk4-test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , moffy-samples-gtk4
   default-language: Haskell2010
